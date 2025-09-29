@@ -32,9 +32,9 @@
   <meta name="apple-mobile-web-app-title" content="Smart Freshness">
   
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="build/web/favicon.png">
-  <link rel="apple-touch-icon" href="build/web/icons/Icon-192.png">
-  <link rel="manifest" href="build/web/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="manifest" href="manifest.json">
 
   <style>
     body {
@@ -129,7 +129,30 @@
       h1 { font-size: 2rem; }
       .container { padding: 1rem; }
     }
+
+    /* Auto-redirect message */
+    .redirect-message {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
   </style>
+  
+  <script>
+    // Auto-redirect to Flutter app after 3 seconds
+    setTimeout(function() {
+      document.getElementById('redirect-message').style.display = 'block';
+    }, 2000);
+    
+    setTimeout(function() {
+      window.location.href = 'app.html';
+    }, 5000);
+  </script>
 </head>
 <body>
   <div class="container">
@@ -161,7 +184,7 @@
       </div>
     </div>
 
-    <a href="build/web/index.html" class="launch-button">
+    <a href="app.html" class="launch-button">
       Launch Web App 🚀
     </a>
 
@@ -171,10 +194,13 @@
       <br><br>
       <strong>Web Limitations:</strong> Camera access requires HTTPS in production.
       Some features may be limited in web browsers.
+      <br><br>
+      <strong>Auto-redirecting to app in 5 seconds...</strong>
     </p>
   </div>
 
-  <!-- Analytics (Optional) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+  <div id="redirect-message" class="redirect-message" style="display: none;">
+    Redirecting to app...
+  </div>
 </body>
 </html>
