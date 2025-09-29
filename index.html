@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Freshness Sticker - Food Freshness Detection App</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Smart Freshness Sticker - A cross-platform mobile app that uses computer vision to detect food freshness by analyzing colored stickers. Scan, save, and stay fresh!">
+  <meta name="keywords" content="food freshness, sticker scanning, computer vision, flutter app, food safety, expiry detection">
+  <meta name="author" content="Smart Freshness Team">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:title" content="Smart Freshness Sticker - Food Freshness Detection App">
+  <meta property="og:description" content="Scan colored freshness stickers with your phone camera to detect food freshness and get expiry notifications.">
+  <meta property="og:image" content="https://your-domain.com/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://your-domain.com/">
+  <meta property="twitter:title" content="Smart Freshness Sticker">
+  <meta property="twitter:description" content="Scan colored freshness stickers with your phone camera to detect food freshness and get expiry notifications.">
+  <meta property="twitter:image" content="https://your-domain.com/twitter-image.png">
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#4CAF50">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Smart Freshness">
+  
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="build/web/favicon.png">
+  <link rel="apple-touch-icon" href="build/web/icons/Icon-192.png">
+  <link rel="manifest" href="build/web/manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #4CAF50, #66BB6A);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      padding: 2rem;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .logo svg {
+      width: 60px;
+      height: 60px;
+      fill: #4CAF50;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .feature {
+      background: rgba(255,255,255,0.1);
+      padding: 1rem;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+
+    .launch-button {
+      display: inline-block;
+      background: white;
+      color: #4CAF50;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .launch-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .note {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .container { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <svg viewBox="0 0 24 24">
+        <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>
+      </svg>
+    </div>
+    
+    <h1>Smart Freshness Sticker</h1>
+    <p class="tagline">Scan • Save • Stay Fresh</p>
+    
+    <div class="features">
+      <div class="feature">
+        <h3>📱 Camera Scanning</h3>
+        <p>Scan colored stickers with your camera</p>
+      </div>
+      <div class="feature">
+        <h3>🎯 AI Detection</h3>
+        <p>Advanced color analysis for freshness</p>
+      </div>
+      <div class="feature">
+        <h3>🔔 Smart Alerts</h3>
+        <p>Get notified before food expires</p>
+      </div>
+      <div class="feature">
+        <h3>💾 Local Storage</h3>
+        <p>All data saved on your device</p>
+      </div>
+    </div>
+
+    <a href="build/web/index.html" class="launch-button">
+      Launch Web App 🚀
+    </a>
+
+    <p class="note">
+      <strong>Note:</strong> For the best experience with camera functionality, 
+      please use the mobile app available on Android and iOS.
+      <br><br>
+      <strong>Web Limitations:</strong> Camera access requires HTTPS in production.
+      Some features may be limited in web browsers.
+    </p>
+  </div>
+
+  <!-- Analytics (Optional) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+</body>
+</html>
